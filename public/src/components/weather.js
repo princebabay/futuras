@@ -10,8 +10,8 @@
         function componentController(ServiceMeteo){
             var vm = this;
             vm.getIcon = getIcon;
-            ServiceMeteo.observations("10", "20").success(success);
-            //navigator.geolocation.getCurrentPosition(successPosition, errorPosition);
+            /*ServiceMeteo.observations("10", "20").success(success);*/
+            navigator.geolocation.getCurrentPosition(successPosition, errorPosition);
             
             function success(data){
                 vm.observations = data.observation;   

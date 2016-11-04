@@ -11,7 +11,7 @@
         this.liste = getListeDeveloppeur;
         
         function getListeDeveloppeur(){
-            return $http.get("http://localhost:6001/developpeurs");
+            return $http.get("https://futuras.mybluemix.net/developpeurs");
         }
     }
 

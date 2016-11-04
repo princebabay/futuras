@@ -8,11 +8,18 @@
 
     function component() {
 
-        function componentController($rootScope){
+        function componentController($rootScope, $scope){
             var vm = this;
             vm.fil = [];
             vm.sendMessage = sendMessage;
             vm.pathAvatar = "assets/img";
+
+            init();
+
+            function init(){
+
+            }
+
             function sendMessage(){
                 vm.user.msg = vm.msg;
                 vm.fil.push(vm.msg);
@@ -21,15 +28,10 @@
             }
 
             $rootScope.socket.on('message', function(msg){
-                vm.fil.push({txt: msg, from:true});
-                console.log(vm.fil);
+                $scope.$apply(function(){
+                    vm.fil.push({txt: msg, from:true});
+                });
             });
-
-            init();
-
-            function init(){
-
-            }
         }
 
         return {

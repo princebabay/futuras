@@ -8,7 +8,8 @@
 
     /** @ngInject */
     function listeActService($http){
-        var urlBase="http://localhost:6001";
+        //var urlBase="http://localhost:6001";
+        var urlBase="https://futuras.mybluemix.net";
 
         this.listeJobs = listeJobs;
         this.searchJob = searchJob;
