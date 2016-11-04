@@ -15,5 +15,9 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application base
 [Install Node.js]: https://nodejs.org/en/download/
 =======
 # futuras
+<<<<<<< HEAD
 Portal d'annonce gratuti
 >>>>>>> 5b129e9d76672ecc8d94cee3f130b52e29867417
+=======
+Portal d'annonce gratuit
+>>>>>>> 689d812008bd8ebbdfc80b3da916af5758671fb4
