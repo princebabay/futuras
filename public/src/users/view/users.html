@@ -1,0 +1,8 @@
+<div layout="column" layout-align="" style="padding-top: 30px; padding-left: 10px;
+     position: fixed; height: 100%;border-left: 1px solid #ddd;" )
+      ng-controller="DeveloppeurCtrl as ctrl">
+    <div ng-repeat='user in ctrl.developpeurs' layout="row" layout-align="start center" style="margin-top: 10px" ng-click="ctrl.createDisc(user);">
+        <div class="avatar-friends" style="background:url('{{ctrl.pathAvatar}}/{{user.avatar}}'); background-size:cover;"></div> 
+        <span style="font-size: 13px; font-weight: bold">{{user.nom}} {{user.prenom}}</span>
+    </div>
+</div>

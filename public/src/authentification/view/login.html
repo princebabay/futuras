@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Futuras Jobs</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+        <link rel="stylesheet" href="bower/angular-material/angular-material.css"/>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="bower/angular/angular.js"></script>
+        <script src="bower/angular-animate/angular-animate.js"></script>
+        <script src="bower/angular-aria/angular-aria.js"></script>
+        <script type="text/javascript" src="bower/angular-material/angular-material.js"></script>
+        <script type="text/javascript" src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="src/app.js"></script>
+		<script type="text/javascript" src="src/authentification/LoginCtrl.js"></script>
+		<script type="text/javascript" src="src/authentification/LoginService.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body ng-app="portal" >
+<md-content style="height:100%;">
+<div flex layout="row" layout-align="center center" style="height:100%;" ng-controller="LoginCtrl as $ctrl">
+        <md-content flex id="content" >
+					<div layout="row" style="height: 50%" layout-align="center center">
+					<md-card flex=30 flex-xs=100 flex-sm=75 flex-gt-sm=50 flex-md=50 flex-gt-md=30>
+						<md-card-content >
+						<form ng-submit="$ctrl.login()" name="form">
+							<div layout="column" layout-align="center center">
+								<img src="assets/user/6_social_person.png" style="border-radius:50%; border:2px solid gray;padding:4px">
+								<h1 style="color:gray">FUTURAS</h1>
+								<br />
+								<input required class="myInput" type="text" ng-model="$ctrl.user.email" style="border:none; box-shadow:0.5px 0.5px 0.5px 0.5px gray; padding:13px; width: 100%;" placeholder='login'>
+								<br />
+								<input required class="myInput" type="password" ng-model="$ctrl.user.password" style="border:none; box-shadow:0.5px 0.5px 0.5px .5px gray; padding:13px; width: 100%;" placeholder='password'>
+								<br />
+							</div>
+							<div layout="column" layout-align="start start">
+								<md-checkbox class="md-primary" ng-model="data.cb1" aria-label="Checkbox 1">
+									Accepter notre condition
+								</md-checkbox>
+							</div>
+							<div layout="row" layout-xs="column" layout-align="start start">
+								<md-button type="submit" ng-submit="alert('bjr')" class="md-raised md-primary" style="margin-left:0">
+									Login
+								</md-button>
+								<md-button md-no-ink class="" >Mot de passe oublié</md-button>
+							</div>
+						</form>
+						</md-card-content>
+					</md-card>
+					</div>
+        </md-content>
+    </div>
+</md-content>
+    </body>
+</html>

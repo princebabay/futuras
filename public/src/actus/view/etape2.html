@@ -1,0 +1,15 @@
+<md-content style="overflow-x:hidden;">
+	<div layout="row">
+		<div flex>
+			<div layout="row">
+				<md-select ng-model="actu.typeAnnonce" flex placeholder="Type d'annonce">
+					<md-option ng-repeat="annonce in annonces" ng-value="annonce">
+					  {{annonce}}
+					</md-option>
+				</md-select>
+			</div>
+		</div>
+		<div flex=35>
+		
+		</div>
+</md-content>

@@ -1,0 +1,21 @@
+<style>
+    .msg-from{
+        word-break: break-all; margin-top: 7px; font-size: 14px; display: inline-block; width: 70%;background: #FF6D00; color: white; padding: 10px; border-radius: 2px;
+    } 
+    .msg-me{
+        word-break: break-all; margin-top: 7px; margin-left: 13%;position: relative; right: 0;font-size: 14px; display: inline-block; width: 75%;background: #eee; color: black; padding: 10px; border-radius: 2px;
+    }
+</style>
+<div style="width: 100%;">
+    <div class="hide-xs">
+        <div style="padding-bottom: 5px;" class="md-whiteframe-2dp">
+            <div class="avatar" style="background:url('{{$ctrl.pathAvatar}}/{{$ctrl.user.avatar}}'); background-size:cover;"></div><span class="pseudo ng-binding">{{ $ctrl.user.nom }} {{ $ctrl.user.prenom }}</span>
+        </div>
+        <div style="position: absolute; height: 65%; overflow:auto; width:90%; bottom: 45px; padding: 15px">
+            <div ng-class="msg.from ? 'msg-from':'msg-me'" ng-repeat="msg in $ctrl.fil">{{msg.txt}}</div>
+        </div>
+        <form ng-submit="$ctrl.sendMessage();">
+            <input required="" autocomplete="false" ng-model="$ctrl.msg.txt" class="myInput" style="border-top: 2px solid #eee;" type="text" placeholder="message">
+        </form>
+    </div>
+</div>

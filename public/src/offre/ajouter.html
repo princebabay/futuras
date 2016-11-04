@@ -1,0 +1,68 @@
+        <md-content layout="column" layout-padding style="height: 100;">
+            <div style="height: calc(100%); overflow:auto;">
+                <h1 style="margin-bottom:0;">Recrutement</h1>
+                <small style="color:gray">
+                    (Ajouter votre annonce gratuitement et nous allons vous propoer de façon intelligent
+                    celui qui vous faut.)
+                    <br />
+                </small>
+                <br />
+                <div layout="row">
+                    <div flex>
+                        <div layout="row">
+                            <div flex>
+                                <md-input-container style="width:100%;">
+                                <input ng-model="$ctrl.offre.entreprise" name="nom"
+                                        type="text"
+                                        ng-model="lastname" 
+                                        required 
+                                        placeholder="Nom de l'entreprise"
+                                        aria-label="nom" />
+                                </md-input-container>
+                            </div>
+                            <span flex=5></span>
+                            <div flex>
+                                <md-input-container  style="width:100%;">
+                                <input name="name"
+                                        type="type"
+                                        ng-model="$ctrl.offre.poste"
+                                        
+                                        placeholder="Titre du poste"
+                                        aria-label="poste">
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <md-chips ng-model="$ctrl.selectedVegetables" md-autocomplete-snap
+                        md-transform-chip="$ctrl.transformChip($chip)"
+                        md-require-match="$ctrl.autocompleteDemoRequireMatch">
+                            <md-autocomplete
+                                md-selected-item="$ctrl.selectedItem"
+                                md-search-text="$ctrl.searchText"
+                                md-items="item in $ctrl.querySearch($ctrl.searchText)"
+                                md-item-text="item.name"
+                                placeholder="Technologie">
+                                <span md-highlight-text="$ctrl.searchText">{{item.name}} :: {{item.type}}</span>
+                            </md-autocomplete>
+                            <md-chip-template>
+                                <span>
+                                <strong>{{$chip.name}}</strong>
+                                <em>({{$chip.type}})</em>
+                                </span>
+                            </md-chip-template>
+                        </md-chips>
+                    </div>
+                </div>
+                <br />
+                <editor style="margin-top:30px;"></editor>
+                <br />
+                <br />
+                <br />
+            </div>
+            <div layout="row" style="position:fixed; bottom: 5px; background:white;width:100%;">
+            <md-button ng-click="$ctrl.save()"
+                        id="button-id"
+                        class="md-primary md-raised"
+                        md-ripple-size="full"
+                        aria-label="button-label"> Enregistrer </md-button>
+        </div>
+        </md-content>

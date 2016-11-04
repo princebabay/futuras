@@ -1,0 +1,126 @@
+<h1>Contacts</h1>
+<div layout="column">
+    <div layout="row" layout-xs="column">
+        <div flex layout="column" ng-repeat="d in [
+                {nom: 'BABAY Prince', poste: 'NodeJs, symfony', img: '01.png'},
+                {nom: 'JHONNHY Deep', poste: 'Commerciale', img: '02.png'},
+                {nom: 'CAMEROON Diaz', poste: 'Gestionnaire', img: '05.png'}
+            ]">
+            <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <b>{{ d.nom}}</b>
+                        <span class="md-subhead">{{d.poste}}</span>
+                        <p style="font-size: 14px;">Développeur depuis 5ans chez vivetic.</p>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img src="assets/img/{{d.img}}" style="height: 84px !important; width: auto !important; float: right"/>
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button >Voire</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+    <div layout="row">
+        <div flex layout="column" ng-repeat="i in [1, 2, 3]">
+            <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <b>Card with image</b>
+                        <span class="md-subhead">Symfony, Node</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img src="assets/img/prince2.png" />
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Voire</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+    <div layout="row">
+        <div flex-xs layout="column" ng-repeat="i in [1, 2, 3]">
+            <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                <md-card-title>
+                    <md-card-title-text>
+                        <b>Card with image</b>
+                        <span class="md-subhead">Symfony, Node</span>
+                        <p style="font-size: 14px;">
+                            Développeur symfony depuis 5 ans dans un ssii
+                        </p>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media">
+                            <img src="assets/img/prince.png" />
+                        </div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>
+
+<!--<md-list ng-controller="ListCtrl" ng-cloak>
+
+  <md-subheader class="md-no-sticky">Single Action Checkboxes</md-subheader>
+  <md-list-item ng-repeat="topping in toppings">
+    <p> {{ topping.name }} </p>
+    <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-subheader class="md-no-sticky">Secondary Buttons</md-subheader>
+  <md-list-item class="secondary-button-padding">
+    <p>Clicking the button to the right will fire the secondary action</p>
+    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+  </md-list-item>
+  <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+    <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-subheader class="md-no-sticky">Clickable Items with Secondary Controls</md-subheader>
+  <md-list-item ng-click="navigateTo(setting.extraScreen, $event)" ng-repeat="setting in settings">
+    <md-icon md-svg-icon="{{setting.icon}}"></md-icon>
+    <p> {{ setting.name }} </p>
+    <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
+  </md-list-item>
+  <md-list-item ng-click="navigateTo('data usage', $event)">
+    <md-icon md-svg-icon="cached"></md-icon>
+    <p>Data Usage</p>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-subheader class="md-no-sticky">Checkbox with Secondary Action</md-subheader>
+  <md-list-item ng-repeat="message in messages">
+    <md-checkbox ng-model="message.selected"></md-checkbox>
+    <p>{{message.title}}</p>
+    <md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+  </md-list-item>
+
+  <md-divider></md-divider>
+
+  <md-subheader class="md-no-sticky">Avatar with Secondary Action Icon</md-subheader>
+  <md-list-item ng-repeat="person in people" ng-click="goToPerson(person.name, $event)" class="noright">
+    <img alt="{{ person.name }}" ng-src="{{ person.img }}" class="md-avatar" />
+    <p>{{ person.name }}</p>
+    <md-checkbox class="md-secondary" ng-model="person.selected"></md-checkbox>
+    <md-icon md-svg-icon="communication:email"  ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>
+    <md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+  </md-list-item>
+</md-list>-->

@@ -1,0 +1,7 @@
+<div layout="column" layout-align="end end" ng-if="$ctrl.observations">
+    <div layout="row">
+        <span><img height="24" width="24" ng-src="{{$ctrl.getIcon($ctrl.observations.wx_icon)}}" /></span>
+        <b style="position:relative; top:3px;">{{$ctrl.observations.temp}}°<br></b>
+    </div>
+    <div>il fait {{$ctrl.observations.wx_phrase}}</div>
+</div>

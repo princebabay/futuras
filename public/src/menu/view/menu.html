@@ -1,0 +1,42 @@
+<md-conent layout="column" style="padding:15px 0px; position: fixed; height: 100%;" hide-xs>
+    <div layout="column" style="height: 80%">
+        <div layout="row" class="home">
+            <md-button ng-href="#/home" class="md-fab md-mini md-raised" aria-label="Home" style="margin-right: 10px; ">
+                <md-icon md-svg-src="assets/svg/icons-64/Home.svg"></md-icon>
+            </md-button>
+            <h5 style="position: relative; top: -5px">Dashboard</h5>
+        </div>
+        <div layout="row" class="folder">
+            <md-button ng-href="#/dossier" class="md-fab md-mini md-raised" aria-label="Folder" style="margin-right: 10px; ">
+                <md-icon md-svg-src="assets/svg/icons-64/Folder.svg"></md-icon>
+            </md-button>
+            <h5 style="position: relative; top: -5px">Vos dossier</h5>
+        </div>
+        <div layout="row" class="calendar">
+            <md-button ng-href="#/programmes" class="md-fab md-mini md-raised" aria-label="Calendar" style="margin-right: 10px; box-shadow: transparent !important">
+                <md-icon md-svg-src="assets/svg/icons-64/Calendar.svg"></md-icon>
+            </md-button>
+            <h5 style="position: relative; top: -5px">Vos programmes</h5>
+        </div>
+        <div layout="row" class="contacts">
+            <md-button ng-href="#/contacts/liste" class="md-fab md-mini md-raised" aria-label="Contacts" style="margin-right: 10px; box-shadow: transparent !important">
+                <md-icon md-svg-src="assets/svg/icons-64/Contacts.svg"></md-icon>
+            </md-button>
+            <h5 style="position: relative; top: -5px">Contacts</h5>
+        </div>
+        <div layout="row" class="contacts">
+            <md-button ng-href="#/documents" class="md-fab md-mini md-raised" aria-label="Document" style="margin-right: 10px; box-shadow: transparent !important">
+                <md-icon md-svg-src="assets/svg/icons-64/Document.svg"></md-icon>
+            </md-button>
+            <h5 style="position: relative; top: -5px">Mon cv</h5>
+        </div>
+    </div>
+    <div>
+        <md-button ui-sref="offre-add"
+                   id="button-id"
+                   class="button-class|md-primary"
+                   md-ripple-size="full | partial | auto"
+                   md-no-ink="true"
+                   aria-label="button-label"> ajoute un offre </md-button>    
+    </div>
+</md-conent>

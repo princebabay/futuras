@@ -1,0 +1,31 @@
+<md-content style="overflow-x:hidden;">
+	<div layout="row">
+		<div flex>
+			<div layout>
+				<md-select ng-model="actu.typeAnnonce" flex placeholder="Type d'annonce">
+					<md-option ng-repeat="annonce in annonces" ng-value="annonce">
+					  {{annonce}}
+					</md-option>
+				</md-select>
+			</div>
+			<div layout="row">
+				<md-input-container flex>
+					<label>Titre</label>
+					<input ng-model="actu.titre" type="titre">
+				</md-input-container>
+				<md-input-container flex>
+					<label>Email</label>
+					<input ng-model="user.email" type="email">
+				</md-input-container>
+			</div>
+			<div layout="column">
+				<textarea placeholder="Description du poste" rows=7></textarea>
+			</div>
+			<div layout="column" layout-align="end end">
+				<md-button class="md-raised" ui-sref="actu.etape2">Suivant</md-button>
+			</div>
+		</div>
+		<div flex=35 hide-xs>
+		
+		</div>
+</md-content>

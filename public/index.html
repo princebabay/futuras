@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Futuras Jobs</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+        <link rel="stylesheet" href="bower/angular-material/angular-material.css"/>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="bower/angular/angular.min.js"></script>
+        <script src="bower/angular-animate/angular-animate.min.js"></script>
+        <script src="bower/angular-aria/angular-aria.min.js"></script>
+        <script type="text/javascript" src="bower/angular-material/angular-material.min.js"></script>
+        <script type="text/javascript" src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="src/app.js"></script>
+        <script type="text/javascript" src="src/home/actualiteCtrl.js"></script>
+        <script type="text/javascript" src="src/home/actualiteService.js"></script>
+        <script type="text/javascript" src="src/profile/ProfileController.js"></script>
+        <script type="text/javascript" src="src/offre/Offre.js"></script>
+        <script type="text/javascript" src="src/components/editor.js"></script>
+        <script type="text/javascript" src="src/offre/OffreService.js"></script>
+        <script type="text/javascript" src="src/users/usersController.js"></script>
+        <script type="text/javascript" src="src/users/userService.js"></script>
+        <script type="text/javascript" src="src/offre/PropositionCtrl.js"></script>
+        <script type="text/javascript" src="src/offre/PropositionService.js"></script>
+
+        <script type="text/javascript" src="src/routes.js" ></script>
+        <script type="text/javascript" src="src/services/weatherService.js" ></script>
+        <script type="text/javascript" src="src/components/weather.js"></script>
+        <script type="text/javascript" src="src/components/messagerie.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body ng-app="portal" >
+	<!--<div ng-include="'src/authentification/view/login.html'"></div>-->
+    <md-content style="height: 100%;">
+        <md-toolbar class="md-whiteframe-3dp" style="background: white !important">
+            <div class="md-toolbar-tools">
+                <h2 style="position: relative; top: 0px; color:#333">
+                    <md-button class="md-mini" aria-label="Menu" style="min-width: 0;
+                               position: relative; top: -3px;">
+                        <md-icon md-svg-src="assets/svg/icons-64/Menu.svg"></md-icon>
+                    </md-button>
+                    <span>Réseau pro</span>
+                </h2>
+                <span flex="5"></span> 
+                <a hide-xs href="javascript:(void)" class="active">Compte</a>
+                <a hide-xs href="javascript:(void)">Offres <sup class="badge"><span>1</span></sup></a>
+                <a hide-xs href="javascript:(void)">Tests</a>
+                <a href="javascript:(void)"></a>
+                <span flex></span>
+                <weather style="color:#333; font-size: 14px;"></weather>
+                <span flex=5></span>
+                <a hide-xs href="javascript:(void)">Messages</a>
+                <md-button ng-hide="onSearch" ng-click="onSearch = onSearch ? false : true" class="md-fab md-mini md-raised" aria-label="Eat cake" style="margin-right: 30px">
+                    <md-icon md-svg-src="assets/svg/icons-64/Search.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <div ng-show="onSearch" layout="column" layout-sm="column" layout-align="start center" style="height: calc(100% - 65px); background: #efefef">
+            <h1 style="margin-top: 10%;">Effectuer vos recherche ici</h1>
+            <form ng-submit="onSearch = false;"  style="padding: 0 20px; width: 50%;">
+                <input class="md-whiteframe-2dp" autocomplete="false"  class="myInput" type="text" 
+                       style="outline:none; height: auto; 
+                       font-size:20px; border:none; 
+                       padding:9px 10px; width: 100%;" 
+                       placeholder='Trouver un poste' />
+            </form>
+        </div>
+        <div ng-hide="onSearch" layout="row" style="padding:0 0 0 30px; height: 90%; overflow: auto">
+            <div hide-xs flex="15" flex-sm=30 style="padding:0 30px 0 0; ">
+                <div ng-include="'src/menu/view/menu.html'"></div>
+            </div>
+            <ui-view flex></ui-view>
+            <div hide-sm hide-xs flex='20' style="margin-left: 25px;" >
+                <div ng-include="'src/users/view/users.html'"></div>
+            </div>
+        </div>
+        <messagerie class="message md-whiteframe-3dp" ng-repeat="user in userDiscr" style="right: {{ $index*270 + $index*20 + 30 }}px;" user="user"></messagerie>
+    </md-content>
+</body>
+</html>

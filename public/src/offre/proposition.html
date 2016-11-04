@@ -1,0 +1,51 @@
+<style>
+    .proposition table{
+        width: 100%;
+    }
+    .proposition table thead{
+        background: white;
+        color:gray;
+        font-size: 13px;
+        text-align: left;
+    }
+    .proposition table thead th{
+        border-bottom: 2px solid #eee;
+    }
+    .proposition table thead th, .proposition table tbody td{
+        padding:10px 5px;
+    }
+    .proposition table tbody tr:nth-child(2n) {
+        background: rgba(0,0,0,0.02);
+    }
+</style>
+<md-content class="proposition">
+    <div layout="row" layout-padding>
+        <div flex=75>
+            <img src="assets/img/avatar-36.jpg" />
+            <h4>Nom de l'offre</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th></th>
+                        <th>Développeur</th>
+                        <th>Compétance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="prop in [1,2,3,4,5]">
+                        <td>458</td>
+                        <td><img src="assets/img/avatar-36.jpg" width="24" /></td>
+                        <td>Prince BABAY</td>
+                        <td>C#, Angular, Laravel</td>
+                        <td> <md-icon style="font-size:8px;" md-svg-src="assets/svg/icons-64/File.svg" aria-label="label"></md-icon> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div flex=25>
+            
+        </div>
+    </div>
+</md-content>
