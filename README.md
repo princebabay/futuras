@@ -1,2 +1,2 @@
 # futuras
-Portal d'annonce gratuti
+Portal d'annonce gratuit
