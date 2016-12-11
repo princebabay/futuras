@@ -28,14 +28,11 @@ build/Release
 
 # Dependency directories
 node_modules
+bower_components
 jspm_packages
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
-<<<<<<< HEAD
 .node_repl_history
-=======
-.node_repl_history
->>>>>>> 5b129e9d76672ecc8d94cee3f130b52e29867417
