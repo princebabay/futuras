@@ -23,7 +23,8 @@
             </div>
             <div ng-hide="$ctrl.searchJob || $ctrl.onLoad;" layout="column">
                 <h3 style="text-align: center" ng-show="!$ctrl.actualites.length">Aucun résultat</h3>
-                <md-card ng-class="eprs.onDetail ? 'md-whiteframe-10dp card-detail':''" ng-repeat="eprs in $ctrl.actualites" 
+                <md-card ng-class="eprs.onDetail ? 'md-whiteframe-10dp card-detail':''" 
+                         ng-repeat="eprs in $ctrl.actualites" 
                          md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" 
                          md-theme-watch style="margin-bottom: 10px;">
                     <md-card-title>
@@ -52,7 +53,7 @@
                                     <!--<img src="assets/img/{{eprs.img}}" style="width:70%">-->
                                 </p>
                                 <p style="font-size: 14px">
-                                    {{eprs.contenue}}
+                                    {{eprs.contenu}}
                                 </p>
                             </div>
                         </div>

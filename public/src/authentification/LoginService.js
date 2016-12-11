@@ -6,8 +6,8 @@
         .service('LoginService', Service)
 
     /** @ngInject */
-    function Service($http){
-        var url="http://localhost:6001/login";
+    function Service($http, config){
+        var url=config.url+"/login";
 
         this.auth = auth;
         

@@ -1,0 +1,42 @@
+<md-content style="height:100%;">
+    <div flex layout="row" layout-align="center center" style="height:100%;">
+        <md-content flex id="content">
+            <div layout="row" style="height: 50%" layout-align="center center">
+                <md-card flex=30 flex-xs=100 flex-sm=75 flex-gt-sm=50 flex-md=50 flex-gt-md=30>
+                    <md-card-content>
+                        <form ng-submit="$ctrl.inscrir()" name="form">
+                            <div layout="column" layout-align="center center">
+                                <img src="assets/user/6_social_person.png" style="border-radius:50%; border:2px solid gray;padding:4px">
+                                <br />
+                                <input required class="myInput" type="text" ng-model="$ctrl.user.nom" style="border:none; box-shadow:0.5px 0.5px 0.5px 0.5px gray; padding:13px; width: 100%;"
+                                    placeholder='Nom'>
+                                <br />
+                                <input required class="myInput" type="text" ng-model="$ctrl.user.prenom" style="border:none; box-shadow:0.5px 0.5px 0.5px 0.5px gray; padding:13px; width: 100%;"
+                                    placeholder='Prenom'>
+                                <br />
+
+                                <input required class="myInput" type="text" ng-model="$ctrl.user.email" style="border:none; box-shadow:0.5px 0.5px 0.5px 0.5px gray; padding:13px; width: 100%;"
+                                    placeholder='email'>
+                                <br />
+                                <input required class="myInput" type="password" ng-model="$ctrl.user.password" style="border:none; box-shadow:0.5px 0.5px 0.5px .5px gray; padding:13px; width: 100%;"
+                                    placeholder='password'>
+                                <br />
+                            </div>
+                            <div layout="column" layout-align="start start">
+                                <md-checkbox class="md-primary" ng-model="data.cb1" aria-label="Checkbox 1">
+                                    Accepter notre condition
+                                </md-checkbox>
+                            </div>
+                            <div layout="row" layout-xs="column" layout-align="start start">
+                                <md-button type="submit" class="md-raised md-primary" style="margin-left:0">
+                                    S'inscrire
+                                </md-button>
+                                <md-button ui-sref="login" md-no-ink>Se connecter</md-button>
+                            </div>
+                        </form>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </md-content>
+    </div>
+</md-content>

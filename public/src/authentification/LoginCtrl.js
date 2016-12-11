@@ -6,9 +6,8 @@
         .controller('LoginCtrl', ControllerCtrl)
 
     /** @ngInject */
-    function ControllerCtrl(LoginService, $rootScope){
+    function ControllerCtrl(LoginService, $rootScope, config){
         var vm = this;
-        
         init();
 
         function init(){
@@ -19,7 +18,7 @@
             LoginService.auth(vm.user).success(function(data){
                 if(data.status){
                     $rootScope.sessionStorage.setItem("user", JSON.stringify(data.user));
-                    window.location.href = "http://localhost:6001/#/home";
+                    window.location.href = config.url+"/#/home";
                 }
             });
         }
