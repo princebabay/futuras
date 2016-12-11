@@ -1,5 +1,5 @@
 <style>
-    .logo{
+    .logo {
         background: #eee;
     }
 </style>
@@ -12,8 +12,8 @@
                     Mes compétences seulement
                 </md-checkbox>
 
-                <input ng-model="$ctrl.keySearch" class="md-whiteframe-1dp" type="text"
-                       style="border:none; padding: 10px; outline: none;" placeholder="Rechercher"/>
+                <input ng-model="$ctrl.keySearch" class="md-whiteframe-1dp" type="text" style="border:none; padding: 10px; outline: none;"
+                    placeholder="Rechercher" />
                 <br />
                 <div ng-hide="$ctrl.searchJob" style="border-top: 1px solid #eee; height: 0px; padding: 0;"></div>
             </form>
@@ -23,10 +23,8 @@
             </div>
             <div ng-hide="$ctrl.searchJob || $ctrl.onLoad;" layout="column">
                 <h3 style="text-align: center" ng-show="!$ctrl.actualites.length">Aucun résultat</h3>
-                <md-card ng-class="eprs.onDetail ? 'md-whiteframe-10dp card-detail':''" 
-                         ng-repeat="eprs in $ctrl.actualites" 
-                         md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" 
-                         md-theme-watch style="margin-bottom: 10px;">
+                <md-card ng-class="eprs.onDetail ? 'md-whiteframe-10dp card-detail':''" ng-repeat="eprs in $ctrl.actualites" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}"
+                    md-theme-watch style="margin-bottom: 10px;">
                     <md-card-title>
                         <md-card-title-text>
                             <span class="md-headline">
@@ -48,7 +46,7 @@
                             <div layout="row">
                                 <p flex style="font-size: 13px">Posté le, <i>{{eprs.date}}</i></p>
                             </div>
-                            <div ng-show="eprs.onDetail" >
+                            <div ng-show="eprs.onDetail">
                                 <p style="text-align: center">
                                     <!--<img src="assets/img/{{eprs.img}}" style="width:70%">-->
                                 </p>
@@ -64,13 +62,16 @@
                         <md-button ng-hide="eprs.onDetail" ng-click="$ctrl.hideAll(eprs, $index);" class='md-raised'>
                             Interesser
                         </md-button>
-                        <md-button ng-show="eprs.onDetail" ng-click="eprs.onDetail = eprs.onDetail ? false : true"  class="md-fab md-mini md-raised" aria-label="Eat cake" style="margin-right: 30px">
+                        <md-button ng-show="eprs.onDetail" ng-click="eprs.onDetail = eprs.onDetail ? false : true" class="md-fab md-mini md-raised"
+                            aria-label="Eat cake" style="margin-right: 30px">
                             <md-icon md-svg-src="assets/svg/icons-64/Share.svg"></md-icon>
                         </md-button>
-                        <md-button ng-show="eprs.onDetail" ng-click="eprs.onDetail = eprs.onDetail ? false : true"  class="md-fab md-mini md-raised" aria-label="Eat cake" style="margin-right: 30px">
+                        <md-button ng-show="eprs.onDetail" ng-click="eprs.onDetail = eprs.onDetail ? false : true" class="md-fab md-mini md-raised"
+                            aria-label="Eat cake" style="margin-right: 30px">
                             <md-icon md-svg-src="assets/svg/icons-64/Idea.svg"></md-icon>
                         </md-button>
-                        <md-button ng-show="eprs.onDetail" ng-click="eprs.onDetail = eprs.onDetail ? false : true"  class="md-fab md-mini md-raised" aria-label="Eat cake" style="margin-right: 30px">
+                        <md-button ng-show="eprs.onDetail" ng-click="$ctrl.selectDocument($event)" class="md-fab md-mini md-raised"
+                            aria-label="Eat cake" style="margin-right: 30px">
                             <md-icon md-svg-src="assets/svg/icons-64/Briefcase.svg"></md-icon>
                         </md-button>
                     </md-card-actions>
@@ -87,7 +88,7 @@
                                 Windows 10 preview
                             </span>
                             <md-card-content layout="column" layout-align="">
-                                <img src="assets/img/overview-RD-security-hello.png" style="width: 100% !important; height: auto !important"/>
+                                <img src="assets/img/overview-RD-security-hello.png" style="width: 100% !important; height: auto !important" />
                                 <p style="font-size: 13px;">
                                     Contenu du message dans le deuxieme card.
                                 </p>
@@ -110,12 +111,11 @@
                      position: relative;
                      top: 0px;
                      vertical-align: middle;
-                     margin-right: 7px;'></div> 
+                     margin-right: 7px;'></div>
                 <span style="color: #FF6D00; font-size: 14px; font-weight: bold;">Steven Smith</span>
                 <p style="font-size: 13px">
-                    Transfert vers Bocasy. Vraiment un actu du jour dans le domaine
-                    Transfert vers Bocasy. Vraiment un actu du jour !
-                    Transfert vers Bocasy. Vraiment un actu du jour !
+                    Transfert vers Bocasy. Vraiment un actu du jour dans le domaine Transfert vers Bocasy. Vraiment un actu du jour ! Transfert
+                    vers Bocasy. Vraiment un actu du jour !
                 </p>
             </div>
         </div>
